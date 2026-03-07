@@ -1,0 +1,103 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle dot grid */
+.dotGrid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.4;
+  mask-image: radial-gradient(ellipse 80% 70% at 30% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 30% 50%, black 20%, transparent 70%);
+}
+
+:global(.dark) .dotGrid {
+  opacity: 0.2;
+}
+
+/* Gradient mesh blobs — warm and organic */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+}
+
+:global(.dark) .blob {
+  opacity: 0.08;
+}
+
+.blob1 {
+  width: 500px;
+  height: 500px;
+  top: -120px;
+  right: -80px;
+  background: radial-gradient(circle at 40% 40%, var(--accent-primary-light), var(--accent-primary));
+  animation: float 14s ease-in-out infinite;
+}
+
+.blob2 {
+  width: 350px;
+  height: 350px;
+  bottom: 10%;
+  left: -100px;
+  background: radial-gradient(circle at 30% 30%, var(--accent-teal-light), var(--accent-teal));
+  animation: float-reverse 12s ease-in-out infinite;
+}
+
+.blob3 {
+  width: 250px;
+  height: 250px;
+  top: 40%;
+  right: 20%;
+  background: radial-gradient(circle at 50% 50%, var(--accent-primary), var(--accent-teal));
+  animation: float 16s ease-in-out infinite;
+  animation-delay: -5s;
+  opacity: 0.06;
+}
+
+/* Geometric line accent */
+.lineAccent {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--accent-primary), transparent);
+  opacity: 0.2;
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Circle accent */
+.circleAccent {
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-primary);
+  opacity: 0.08;
+  animation: spin-slow 25s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

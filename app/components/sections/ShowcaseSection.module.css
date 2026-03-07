@@ -1,0 +1,384 @@
+.section {
+  padding: 100px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.showcaseBlock {
+  padding: 32px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.showcaseBlock:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.blockTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.blockDesc {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* ── Lesson Card recreation ── */
+.cardsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lessonCard {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-left-width: 4px;
+  border-left-style: solid;
+  background: var(--bg-primary);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lessonCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+:global(.dark) .lessonCard {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+}
+
+.lessonCurrent {
+  border-color: var(--accent-blue);
+  border-left-color: var(--accent-blue) !important;
+  background: rgba(37, 99, 235, 0.04);
+}
+
+.lessonContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.lessonHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.lessonSubject {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.labBadge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.12);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.lessonDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.detailIcon {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.lessonTime {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.startTime {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.endTime {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.6rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.currentBadge {
+  display: inline-block;
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: white;
+  background: var(--accent-blue);
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.progressWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 8px 3px;
+}
+
+.progressTrack {
+  height: 3px;
+  background: rgba(37, 99, 235, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 55%;
+  background: var(--accent-blue);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+/* ── Toggle recreation ── */
+.toggleTrack {
+  position: relative;
+  display: flex;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 3px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  height: calc(100% - 6px);
+  background: var(--bg-card);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.toggleOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  background: transparent;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.toggleActive {
+  color: var(--text-primary);
+}
+
+/* ── Day tabs recreation ── */
+.dayTabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.dayTab {
+  flex: 1;
+  text-align: center;
+  padding: 9px 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  color: var(--text-tertiary);
+  background: transparent;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap;
+}
+
+.dayTabActive {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* ── Component demo wrapper ── */
+.componentDemo {
+  margin-bottom: 24px;
+}
+
+.componentDemo:last-child {
+  margin-bottom: 0;
+}
+
+.demoLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-tertiary);
+  margin-bottom: 10px;
+}
+
+/* ── Class pills demo ── */
+.classPillsDemo {
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.sectorHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.sectorName {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sectorCount {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.classPill {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.classPill:hover {
+  border-color: var(--accent-blue);
+}
+
+.classPillActive {
+  background: var(--accent-blue-bg);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.pillYear {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.pillSection {
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .showcaseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 72px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .showcaseBlock {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,154 @@
+.section {
+  padding: 100px 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.stepsRow {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.step {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding: 36px 28px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stepNumber {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+  opacity: 0.15;
+}
+
+.stepIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-tertiary);
+}
+
+/* Connector line between steps (desktop) */
+.connector {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .connector {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    width: 24px;
+    height: 2px;
+    background: var(--border-color);
+    z-index: 1;
+  }
+
+  .connector::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--accent-primary);
+    border-top: 2px solid var(--accent-primary);
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .stepsRow {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    text-align: left;
+    padding: 22px;
+    align-items: center;
+  }
+
+  .step:hover {
+    transform: none;
+  }
+
+  .stepNumber {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 52px;
+  }
+
+  .stepIcon {
+    display: none;
+  }
+
+  .stepTitle {
+    margin-bottom: 4px;
+  }
+}

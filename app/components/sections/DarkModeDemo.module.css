@@ -1,0 +1,245 @@
+.section {
+  padding: 100px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.demoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  perspective: 1000px;
+}
+
+/* Panels */
+.demoPanel {
+  padding: 28px;
+  border-radius: 22px;
+  border: 1px solid;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demoPanel:hover {
+  transform: translateY(-4px);
+}
+
+.panelLight {
+  background: #faf8f5;
+  border-color: #e0dcd5;
+  color: #1a1a2e;
+  box-shadow: 0 8px 30px rgba(26, 26, 46, 0.06);
+}
+
+.panelLight:hover {
+  box-shadow: 0 16px 40px rgba(26, 26, 46, 0.1);
+}
+
+.panelDark {
+  background: #0c0e14;
+  border-color: #1e2130;
+  color: #f0ede8;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.panelDark:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.panelLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.4;
+  margin-bottom: 18px;
+}
+
+/* Mini header */
+.miniHeader {
+  margin-bottom: 14px;
+}
+
+.miniTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.miniSubtitle {
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.panelLight .miniSubtitle {
+  color: #2563eb;
+}
+
+.panelDark .miniSubtitle {
+  color: #60a5fa;
+}
+
+/* Mini day tabs */
+.miniDayTabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.miniTab {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 8px;
+  opacity: 0.35;
+}
+
+.miniTabActive {
+  opacity: 1;
+}
+
+.panelLight .miniTabActive {
+  background: #1a1a2e;
+  color: #faf8f5;
+}
+
+.panelDark .miniTabActive {
+  background: #f0ede8;
+  color: #0c0e14;
+}
+
+/* Mini lesson card */
+.miniCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  margin-bottom: 8px;
+}
+
+.panelLight .miniCard {
+  background: #ffffff;
+  border: 1px solid #e0dcd5;
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.panelDark .miniCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1e2130;
+  border-left-width: 4px;
+  border-left-style: solid;
+  backdrop-filter: blur(8px);
+}
+
+.miniCardContent {
+  flex: 1;
+}
+
+.miniSubject {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.miniDetail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6rem;
+  opacity: 0.45;
+  margin-top: 2px;
+}
+
+.miniTime {
+  text-align: right;
+}
+
+.miniStartTime {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.miniEndTime {
+  font-size: 0.55rem;
+  opacity: 0.45;
+}
+
+/* Ghost card placeholder */
+.miniCardGhost {
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.panelLight .miniCardGhost {
+  background: #f3f0eb;
+}
+
+.panelDark .miniCardGhost {
+  background: #13151d;
+}
+
+.ghostLine {
+  height: 8px;
+  border-radius: 4px;
+}
+
+.panelLight .ghostLine {
+  background: #e0dcd5;
+}
+
+.panelDark .ghostLine {
+  background: #1e2130;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 72px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .demoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .demoPanel:hover {
+    transform: none;
+  }
+}

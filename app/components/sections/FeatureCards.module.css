@@ -1,0 +1,164 @@
+.section {
+  padding: 100px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Bento grid: 2 large on top, 4 small below */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  padding: 28px;
+  border-radius: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+  overflow: hidden;
+}
+
+.cardLarge {
+  grid-column: span 2;
+}
+
+.cardSmall {
+  grid-column: span 1;
+}
+
+:global(.dark) .card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardInner {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.cardLarge .cardInner {
+  flex-direction: row;
+}
+
+.cardSmall .cardInner {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardText {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.cardDesc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+}
+
+/* Accent line that appears on hover */
+.accentLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .accentLine {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardLarge {
+    grid-column: span 2;
+  }
+
+  .cardSmall {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 72px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cardLarge, .cardSmall {
+    grid-column: span 1;
+  }
+
+  .cardLarge .cardInner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
