@@ -6,7 +6,6 @@ import { ShowcaseSection } from "./components/sections/ShowcaseSection";
 import { DarkModeDemo } from "./components/sections/DarkModeDemo";
 import { HowItWorks } from "./components/sections/HowItWorks";
 import { StatsSection } from "./components/sections/StatsSection";
-import { Testimonials } from "./components/sections/Testimonials";
 
 export default function LandingPage() {
   return (
@@ -19,7 +18,6 @@ export default function LandingPage() {
         <DarkModeDemo />
         <HowItWorks />
         <StatsSection />
-        <Testimonials />
         <CTAFooter />
       </main>
     </>
