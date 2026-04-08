@@ -12,7 +12,7 @@ const steps = [
     title: "Accedi con la tua email",
     description:
       "Usa la tua email istituzionale per accedere. Sicuro e immediato, nessuna password da ricordare.",
-    color: "#2563eb",
+    color: "#0a72ef",
   },
   {
     number: "02",
@@ -20,7 +20,7 @@ const steps = [
     title: "Seleziona classe o docente",
     description:
       "Scegli la tua classe o cerca il tuo nome tra i docenti. Filtri per anno e settore.",
-    color: "#0d9488",
+    color: "#de1d8d",
   },
   {
     number: "03",
@@ -28,7 +28,7 @@ const steps = [
     title: "Consulta il tuo orario",
     description:
       "Visualizza le lezioni giorno per giorno. Ricevi notifiche prima di ogni lezione.",
-    color: "#2563eb",
+    color: "#ff5b4f",
   },
 ];
 

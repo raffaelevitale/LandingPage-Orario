@@ -33,7 +33,7 @@ export function HeroSection() {
               className={styles.titleLine}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               Basta confusione.
             </motion.span>
@@ -41,7 +41,7 @@ export function HeroSection() {
               className={styles.titleAccent}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
               L&apos;orario, subito.
             </motion.span>
@@ -90,10 +90,10 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.7 }}
           >
             <div className={styles.avatars}>
-              <div className={styles.avatar} style={{ background: "#2563eb" }}>M</div>
-              <div className={styles.avatar} style={{ background: "#0d9488" }}>L</div>
-              <div className={styles.avatar} style={{ background: "#1d4ed8" }}>A</div>
-              <div className={styles.avatar} style={{ background: "#7c3aed" }}>S</div>
+              <div className={styles.avatar} style={{ background: "#171717" }}>M</div>
+              <div className={styles.avatar} style={{ background: "#0a72ef" }}>L</div>
+              <div className={styles.avatar} style={{ background: "#de1d8d" }}>A</div>
+              <div className={styles.avatar} style={{ background: "#ff5b4f" }}>S</div>
             </div>
             <span className={styles.socialText}>
               <strong>1.200+</strong> studenti lo usano ogni giorno

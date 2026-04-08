@@ -11,7 +11,7 @@ const lesson = {
   classroom: "Lab. INF 1",
   startTime: "10:00",
   endTime: "11:00",
-  color: "#059669",
+  color: "#0a72ef",
 };
 
 function DemoCard({ theme }: { theme: "light" | "dark" }) {

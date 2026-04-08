@@ -10,71 +10,68 @@
 }
 
 .sectionTitle {
-  font-family: var(--font-display);
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -2.4px;
   margin-bottom: 16px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .sectionSubtitle {
-  font-size: 1.1rem;
-  color: var(--text-tertiary);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
   max-width: 450px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 .demoGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  perspective: 1000px;
+  gap: 16px;
 }
 
 /* Panels */
 .demoPanel {
   padding: 28px;
-  border-radius: 22px;
-  border: 1px solid;
+  border-radius: 12px;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.2s ease;
 }
 
 .demoPanel:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .panelLight {
-  background: #faf8f5;
-  border-color: #e0dcd5;
-  color: #1a1a2e;
-  box-shadow: 0 8px 30px rgba(26, 26, 46, 0.06);
+  background: #ffffff;
+  color: #171717;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 2px 2px, rgba(0, 0, 0, 0.04) 0px 8px 8px -8px;
 }
 
 .panelLight:hover {
-  box-shadow: 0 16px 40px rgba(26, 26, 46, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 4px 8px, rgba(0, 0, 0, 0.04) 0px 12px 16px -8px;
 }
 
 .panelDark {
-  background: #0c0e14;
-  border-color: #1e2130;
-  color: #f0ede8;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  background: #0a0a0a;
+  color: #ededed;
+  box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.4) 0px 4px 8px;
 }
 
 .panelDark:hover {
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(255, 255, 255, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.5) 0px 8px 16px;
 }
 
 .panelLabel {
-  font-size: 0.6rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   opacity: 0.4;
   margin-bottom: 18px;
+  font-family: var(--font-mono);
 }
 
 /* Mini header */
@@ -83,9 +80,9 @@
 }
 
 .miniTitle {
-  font-family: var(--font-display);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .miniSubtitle {
@@ -94,14 +91,15 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 2px;
+  font-family: var(--font-mono);
 }
 
 .panelLight .miniSubtitle {
-  color: #2563eb;
+  color: #0a72ef;
 }
 
 .panelDark .miniSubtitle {
-  color: #60a5fa;
+  color: #3b9eff;
 }
 
 /* Mini day tabs */
@@ -116,9 +114,9 @@
   text-align: center;
   padding: 5px;
   font-size: 0.6rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 6px;
   opacity: 0.35;
 }
 
@@ -127,13 +125,13 @@
 }
 
 .panelLight .miniTabActive {
-  background: #1a1a2e;
-  color: #faf8f5;
+  background: #171717;
+  color: #ffffff;
 }
 
 .panelDark .miniTabActive {
-  background: #f0ede8;
-  color: #0c0e14;
+  background: #ededed;
+  color: #0a0a0a;
 }
 
 /* Mini lesson card */
@@ -141,25 +139,20 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 12px;
-  border-radius: 12px;
-  border-left-width: 4px;
+  border-radius: 8px;
+  border-left-width: 3px;
   border-left-style: solid;
   margin-bottom: 8px;
 }
 
 .panelLight .miniCard {
   background: #ffffff;
-  border: 1px solid #e0dcd5;
-  border-left-width: 4px;
-  border-left-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .panelDark .miniCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid #1e2130;
-  border-left-width: 4px;
-  border-left-style: solid;
-  backdrop-filter: blur(8px);
+  background: #111111;
+  box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
 }
 
 .miniCardContent {
@@ -168,8 +161,9 @@
 
 .miniSubject {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 4px;
+  letter-spacing: -0.32px;
 }
 
 .miniDetail {
@@ -187,29 +181,31 @@
 
 .miniStartTime {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
 }
 
 .miniEndTime {
   font-size: 0.55rem;
   opacity: 0.45;
+  font-feature-settings: "tnum" 1;
 }
 
-/* Ghost card placeholder */
+/* Ghost card */
 .miniCardGhost {
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
 .panelLight .miniCardGhost {
-  background: #f3f0eb;
+  background: #fafafa;
 }
 
 .panelDark .miniCardGhost {
-  background: #13151d;
+  background: #111111;
 }
 
 .ghostLine {
@@ -218,11 +214,11 @@
 }
 
 .panelLight .ghostLine {
-  background: #e0dcd5;
+  background: #ebebeb;
 }
 
 .panelDark .ghostLine {
-  background: #1e2130;
+  background: #2e2e2e;
 }
 
 @media (max-width: 640px) {
@@ -232,6 +228,7 @@
 
   .sectionTitle {
     font-size: 2rem;
+    letter-spacing: -1.5px;
   }
 
   .demoGrid {

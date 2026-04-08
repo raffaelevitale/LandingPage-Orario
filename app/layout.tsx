@@ -1,12 +1,7 @@
-import { DM_Sans } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import type { Metadata } from "next";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Orario — L'orario scolastico, ridisegnato",
@@ -22,10 +17,6 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning>
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
-          rel="stylesheet"
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -39,7 +30,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${dmSans.variable} ${dmSans.className}`}>{children}</body>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${GeistSans.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

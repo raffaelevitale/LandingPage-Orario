@@ -3,10 +3,10 @@
 import styles from "./PhoneMockup.module.css";
 
 const mockLessons = [
-  { subject: "Matematica", teacher: "Rossi M.", time: "8:00 - 9:00", color: "#2563eb", room: "Aula 12" },
-  { subject: "Italiano", teacher: "Bianchi L.", time: "9:00 - 10:00", color: "#7c3aed", room: "Aula 12", current: true },
-  { subject: "Informatica", teacher: "Verdi A.", time: "10:00 - 11:00", color: "#059669", room: "Lab. INF 1", isLab: true },
-  { subject: "Inglese", teacher: "Ferrari S.", time: "11:00 - 12:00", color: "#dc2626", room: "Aula 12" },
+  { subject: "Matematica", teacher: "Rossi M.", time: "8:00 - 9:00", color: "#0a72ef", room: "Aula 12" },
+  { subject: "Italiano", teacher: "Bianchi L.", time: "9:00 - 10:00", color: "#de1d8d", room: "Aula 12", current: true },
+  { subject: "Informatica", teacher: "Verdi A.", time: "10:00 - 11:00", color: "#171717", room: "Lab. INF 1", isLab: true },
+  { subject: "Inglese", teacher: "Ferrari S.", time: "11:00 - 12:00", color: "#ff5b4f", room: "Aula 12" },
 ];
 
 const days = ["Lun", "Mar", "Mer", "Gio", "Ven"];

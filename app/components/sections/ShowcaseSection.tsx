@@ -14,7 +14,7 @@ const showcaseLessons = [
     classroom: "Aula 12",
     startTime: "8:00",
     endTime: "9:00",
-    color: "#2563eb",
+    color: "#0a72ef",
     duration: 60,
   },
   {
@@ -23,7 +23,7 @@ const showcaseLessons = [
     classroom: "Lab. INF 1",
     startTime: "9:00",
     endTime: "10:00",
-    color: "#059669",
+    color: "#171717",
     duration: 60,
     isLab: true,
     isCurrent: true,
@@ -34,7 +34,7 @@ const showcaseLessons = [
     classroom: "Aula 12",
     startTime: "10:00",
     endTime: "11:00",
-    color: "#7c3aed",
+    color: "#de1d8d",
     duration: 60,
   },
   {
@@ -43,7 +43,7 @@ const showcaseLessons = [
     classroom: "Aula 22",
     startTime: "11:00",
     endTime: "12:00",
-    color: "#dc2626",
+    color: "#ff5b4f",
     duration: 60,
   },
 ];

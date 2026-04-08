@@ -1,4 +1,4 @@
-/* ── CTA Section ── */
+/* CTA Section */
 .ctaSection {
   position: relative;
   padding: 120px 24px;
@@ -8,7 +8,7 @@
 .ctaContent {
   position: relative;
   z-index: 1;
-  max-width: 600px;
+  max-width: 560px;
   margin: 0 auto;
   text-align: center;
 }
@@ -17,30 +17,30 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 18px;
-  border-radius: 999px;
-  background: var(--accent-primary-bg);
-  color: var(--accent-primary);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: var(--accent-blue-bg);
+  color: var(--accent-blue);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 24px;
-  border: 1px solid rgba(37, 99, 235, 0.15);
+  box-shadow: var(--shadow-border);
 }
 
 .ctaTitle {
-  font-family: var(--font-display);
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -2.4px;
   margin-bottom: 16px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .ctaSubtitle {
   font-size: 1.05rem;
-  color: var(--text-tertiary);
-  line-height: 1.65;
+  color: var(--text-secondary);
+  line-height: 1.7;
   margin-bottom: 24px;
+  font-weight: 400;
 }
 
 .ctaChecks {
@@ -56,7 +56,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
 }
 
@@ -67,7 +67,7 @@
 
 .ctaForm {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 16px;
 }
 
@@ -78,98 +78,71 @@
 
 .inputIcon {
   position: absolute;
-  left: 16px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-tertiary);
+  color: var(--text-quaternary);
 }
 
 .emailInput {
   width: 100%;
-  padding: 16px 16px 16px 46px;
-  border-radius: 14px;
-  border: 1.5px solid var(--border-color);
+  padding: 12px 14px 12px 42px;
+  border-radius: 6px;
+  border: none;
   background: var(--bg-card);
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   outline: none;
-  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: var(--shadow-border);
+  transition: all 0.2s ease;
   font-family: inherit;
 }
 
 .emailInput:focus {
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 4px var(--accent-primary-bg);
+  box-shadow: 0px 0px 0px 2px var(--focus-color);
 }
 
 .ctaButton {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 16px 30px;
+  padding: 12px 24px;
   background: var(--accent-primary);
-  color: white;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 14px;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
+  color: var(--bg-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
   white-space: nowrap;
   flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
 }
 
 .ctaButton::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.15) 100%);
-  opacity: 0;
-  transition: opacity 0.3s;
+  display: none;
 }
 
 .ctaButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.35);
-}
-
-.ctaButton:hover::after {
-  opacity: 1;
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
 .ctaNote {
   font-size: 0.8rem;
-  color: var(--text-tertiary);
+  color: var(--text-quaternary);
+  font-weight: 400;
 }
 
-/* CTA background glow */
+/* CTA background */
 .ctaBg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse 60% 60% at 50% 80%,
-    rgba(37, 99, 235, 0.06),
-    rgba(13, 148, 136, 0.03) 50%,
-    transparent
-  );
   pointer-events: none;
 }
 
-:global(.dark) .ctaBg {
-  background: radial-gradient(
-    ellipse 60% 60% at 50% 80%,
-    rgba(96, 165, 250, 0.04),
-    rgba(45, 212, 191, 0.02) 50%,
-    transparent
-  );
-}
-
-/* ── Footer ── */
+/* Footer */
 .footer {
   border-top: 1px solid var(--border-color);
   padding: 44px 24px;
-  background: var(--bg-secondary);
 }
 
 .footerInner {
@@ -188,17 +161,17 @@
 }
 
 .footerLogo {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
   object-fit: contain;
 }
 
 .footerName {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
+  letter-spacing: -0.32px;
 }
 
 .footerLinks {
@@ -213,11 +186,11 @@
   color: var(--text-tertiary);
   text-decoration: none;
   transition: color 0.2s;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .footerLink:hover {
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 .footerBottom {
@@ -229,7 +202,8 @@
 
 .footerCopy {
   font-size: 0.8rem;
-  color: var(--text-tertiary);
+  color: var(--text-quaternary);
+  font-weight: 400;
 }
 
 @media (max-width: 640px) {
@@ -239,6 +213,7 @@
 
   .ctaTitle {
     font-size: 2rem;
+    letter-spacing: -1.5px;
   }
 
   .ctaForm {
