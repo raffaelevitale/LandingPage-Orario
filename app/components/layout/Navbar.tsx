@@ -40,9 +40,15 @@ export function Navbar() {
           <a href="#cta" className={styles.link} onClick={() => setMenuOpen(false)}>
             Contatti
           </a>
+          <a href="https://orario.raffaelevitale.it" target="_blank" className={styles.accessLink} onClick={() => setMenuOpen(false)}>
+            Accedi alla piattaforma
+          </a>
         </div>
 
         <div className={styles.actions}>
+          <a href="https://orario.raffaelevitale.it" target="_blank" className={styles.accessBtn}>
+            Accedi alla piattaforma
+          </a>
           <button
             className={styles.themeBtn}
             onClick={toggleTheme}

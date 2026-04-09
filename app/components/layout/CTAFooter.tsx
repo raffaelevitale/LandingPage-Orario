@@ -33,8 +33,8 @@ export function CTAFooter() {
             La tua scuola merita di meglio
           </h2>
           <p className={styles.ctaSubtitle}>
-            Basta fogli appesi in bacheca e foto sfocate su WhatsApp.
-            Attiva Orario gratuitamente e dai a studenti e docenti lo strumento che meritano.
+            Orari sempre aggiornati, consultazione immediata e un punto unico per studenti e docenti.
+            Attiva Orario gratuitamente e porta ordine nella giornata scolastica.
           </p>
 
           <div className={styles.ctaChecks}>

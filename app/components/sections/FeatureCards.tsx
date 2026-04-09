@@ -9,7 +9,7 @@ const features = [
   {
     icon: Zap,
     title: "2 secondi per sapere dove andare",
-    description: "Apri l'app, guarda l'orario. Niente più foto sfocate su WhatsApp o file PDF da scaricare.",
+    description: "Apri l'app e trovi subito orari, aule e docenti senza passaggi inutili.",
     color: "#2563eb",
     size: "large" as const,
   },
@@ -102,7 +102,7 @@ export function FeatureCards() {
           Tutto ci&ograve; che serve,<br />niente di pi&ugrave;
         </h2>
         <p className={styles.sectionSubtitle}>
-          Progettato attorno alle esigenze reali di studenti e docenti italiani.
+          Un'esperienza pensata per chiarezza, rapidità e consultazione immediata.
         </p>
       </motion.div>
 

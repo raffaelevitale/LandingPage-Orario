@@ -53,8 +53,8 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Studenti che cercano foto dell&apos;orario su WhatsApp. Docenti che non
-            sanno le sostituzioni. <strong>Orario risolve tutto in 2 secondi.</strong>
+            Tutto l&apos;orario in un solo posto, sempre aggiornato e facile da consultare.
+            <strong> Orario rende la giornata più semplice a studenti e docenti.</strong>
           </motion.p>
 
           <motion.div
@@ -74,8 +74,8 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.55 }}
           >
-            <a href="#cta" className={styles.ctaPrimary}>
-              Richiedi accesso gratuito
+            <a href="https://orario.raffaelevitale.it" target="_blank" className={styles.ctaPrimary}>
+              Accedi alla piattaforma
               <ArrowRight size={18} />
             </a>
             <a href="#showcase" className={styles.ctaSecondary}>
